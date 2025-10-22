@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/5.2/ref/settings/
 """
 
 from datetime import timedelta
+import os
 from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -26,7 +27,7 @@ SECRET_KEY = 'django-insecure-4(_q8wx5nb^xp=&80&n^^4qrw^8f0i@klxjdwg9v9%uh1!x9-!
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['bedanaurum.pythonanywhere.com']
 
 
 # Application definition
@@ -108,14 +109,14 @@ WSGI_APPLICATION = 'smartcanteen.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'smartcanteen',
-        'USER': 'admin',
-        'PASSWORD': 'admin',
-        'HOST': 'localhost',
+        'NAME': 'bedanaurum$smartcanteen',
+        'USER': 'bedanaurum',
+        'PASSWORD': 'admincanteen',
+        'HOST': 'bedanaurum.mysql.pythonanywhere-services.com',
         'PORT': '3306',
     }
 }
-
+#admincanteen - Password for mySQL in pythonAnywhere
 
 # Password validation
 # https://docs.djangoproject.com/en/5.2/ref/settings/#auth-password-validators
@@ -152,6 +153,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/5.2/howto/static-files/
 
 STATIC_URL = 'static/'
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 
 MEDIA_URL = '/media/'
