@@ -27,7 +27,11 @@ SECRET_KEY = 'django-insecure-4(_q8wx5nb^xp=&80&n^^4qrw^8f0i@klxjdwg9v9%uh1!x9-!
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['bedanaurum.pythonanywhere.com']
+ALLOWED_HOSTS = [
+    'bedanaurum.pythonanywhere.com',
+    'https://smart-canteen-50d9b.web.app/',
+    'https://smart-canteen-50d9b.firebaseapp.com/'
+]
 
 
 # Application definition
